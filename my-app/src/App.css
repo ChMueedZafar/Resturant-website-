@@ -172,7 +172,19 @@
   text-align: center;
   transition: 0.5s;
 }
-/* .bottomMenu ul li a .icon  */
+.bottomMenu ul li a .icon .MuiSvgIcon-root{
+  font-size: 26px;
+  color: #373848;
+}
+.bottomMenu ul li:hover a .icon {
+  transform: translateY(-26px);
+}
+.bottomMenu ul li:hover a .icon .MuiSvgIcon-root{
+  color: #faf9fb;
+  transition: 0.5s;
+}
+
+
 
   /* Main Section Style */
   main{

@@ -34,7 +34,7 @@ function App() {
           <div className='indicator'></div>
 
         </ul>
-
+        
        </div>
        </div>
 
