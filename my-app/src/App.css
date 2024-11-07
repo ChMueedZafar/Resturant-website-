@@ -9,6 +9,7 @@
     display: none;
   }
   
+  /* Header Style Start */
   header {
     display: flex;
     align-items: center;
@@ -26,8 +27,9 @@
   
   .logo {
     min-width: 40px;
-    width: 50px;
+    width: 150px;
   }
+ 
 
   .inputBox {
     background: #ffffff;
@@ -56,4 +58,126 @@
     font-size: 14px;
     font-weight: 500;
   }
+
+  .shoppingCart {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shoppingCart .cart {
+    font-size: 30px;
+    color: #373848;
+  }
   
+  .shoppingCart .cart_content {
+    width: 20px;
+    height: 20px;
+    background: #f8901c;
+    border-radius: 100%;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -8px;
+  }
+
+  .shoppingCart .cart_content p{
+    font-weight: 500;
+    color: #faf9fb;
+  }
+
+  .profileContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileContainer .imgBox {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+
+.profileContainer .userName{
+    font-size: 16px;
+    margin-left: 8px;
+    font-weight: 500;
+    display: none;
+    align-items: center;
+  }
+
+  .toggleMenu {
+    transform: rotate(90deg);
+  }
+  
+  .toggleMenu .toggleIcon {
+    color: #373848;
+    font-size: 30px !important;
+  }
+
+  /* Header Style ends */
+  
+  /* Bottom Menu Style */
+
+  .bottomMenu{
+    position: fixed;
+    bottom:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background: #d5d5d5;
+    border-radius: 25px 25px 0 0;
+    z-index: 101;
+  }
+.bottomMenu ul {
+  display: flex;
+}
+.bottomMenu ul li{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+}
+
+.bottomMenu ul li a{
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+}
+.bottomMenu ul li a .icon{
+  position: relative;
+  display: block;
+  line-height: 70px;
+  text-align: center;
+  transition: 0.5s;
+}
+/* .bottomMenu ul li a .icon  */
+
+  /* Main Section Style */
+  main{
+    width: 100%;
+    height: auto;
+    background: #555;
+    margin-top: 60px; ;
+  }
