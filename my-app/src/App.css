@@ -248,16 +248,21 @@
   main{
     width: 100%;
     height: auto;
-    background: #faf9fb;
     margin-top: 60px;
+  }
+  .mainContainer{
+    width: 100%;
+    height: auto;
+    background: #faf9fb;
+    padding: 10px;
+    padding-bottom: 100px;
   }
 
   .banner {
     width: 100%;
     height: 130px;
     border-radius: 10px;
-    background: url("")
-      no-repeat center;
+    background: url("https://tse3.mm.bing.net/th?id=OIP.mmrtDp_w6NK65rbSnPJF-wHaEo&pid=Api&P=0&h=220") no-repeat center;
     background-size: cover;
     position: relative;
     display: flex;
