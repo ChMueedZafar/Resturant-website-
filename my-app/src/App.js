@@ -1,17 +1,38 @@
 import { AccountBalanceRounded, Chat, Favorite, Home, Settings, SummarizeRounded } from '@mui/icons-material';
+import { useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import MenuContainer from './Components/MenuContainer';
+import BannerName from './Components/BannerName'
+import Bannerimg from './Assets/bannerimg.png'
 function App() {
+
+  useEffect(() => {
+    const menuLi = document.querySelectorAll("#menu li");
+
+    function setMenuActive() {
+      menuLi.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
+  },[]);
+  
   return (
     <div className='App'>
+
   
      {/* Header Secation  */}
     <Header></Header>
 
       {/* Main Container  */}
      <main>
-      <div className='menuContainer'></div>
+      <div className='menuContainer'>
+        <div className='banner'>
+           <BannerName name={'Mueed,s'} discount={20} link={'#'}/>
+             <img src={Bannerimg} alt='bannerimg' className='deliverypic '/>
+        </div>
+      </div>
       <div className='rightMenu'></div>
       </main>
 

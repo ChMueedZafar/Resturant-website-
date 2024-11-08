@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const MenuContainer = ({link, icon }) => {
+function MenuContainer({ link, icon }) {
   return (
     <li>
-        <a href={link}/>
-        <span className='icon'> {icon}</span>
+      <a href={link}>
+        <span className="icon">{icon}</span>
+      </a>
     </li>
-    
-  )
+  );
 }
 
 export default MenuContainer;

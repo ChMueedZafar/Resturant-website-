@@ -176,12 +176,70 @@
   font-size: 26px;
   color: #373848;
 }
-.bottomMenu ul li:hover a .icon {
+.bottomMenu ul li.active a .icon {
   transform: translateY(-26px);
 }
-.bottomMenu ul li:hover a .icon .MuiSvgIcon-root{
+.bottomMenu ul li.active a .icon .MuiSvgIcon-root{
   color: #faf9fb;
   transition: 0.5s;
+}
+.indicator {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: #f8901c;
+  top: -50%;
+  border-radius: 50%;
+  border: 6px solid #faf9fb;
+  transition: 0.5s;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-right-radius: 18px;
+  box-shadow: 0px -10px 0 0 #faf9fb;
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 18px;
+  height: 18px;
+  background: transparent;
+  border-top-left-radius: 18px;
+  box-shadow: 0px -10px 0 0 #faf9fb;
+}
+
+.bottomMenu ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(60px * 0));
+}
+
+.bottomMenu ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(60px * 1));
+}
+
+.bottomMenu ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(60px * 2));
+}
+
+.bottomMenu ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(60px * 3));
+}
+
+.bottomMenu ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(60px * 4));
+}
+
+.bottomMenu ul li:nth-child(6).active ~ .indicator {
+  transform: translateX(calc(60px * 5));
 }
 
 
@@ -190,6 +248,67 @@
   main{
     width: 100%;
     height: auto;
-    background: #555;
-    margin-top: 60px; ;
+    background: #faf9fb;
+    margin-top: 60px;
+  }
+
+  .banner {
+    width: 100%;
+    height: 130px;
+    border-radius: 10px;
+    background: url("")
+      no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+  }
+  
+  .deliveryPic {
+    position: absolute;
+    right: -60px;
+    bottom: -10px;
+    width: 240px;
+  }
+  
+  .bannerContent {
+    padding: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .bannerContent h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2a2b3c;
+  }
+  
+  .bannerContent p {
+    font-size: 14px;
+    width: 200px;
+    color: #989594;
+    margin: 5px 0;
+  }
+  
+  .bannerContent p span {
+    color: #f8901c;
+    font-weight: 500;
+  }
+  
+  .bannerContent a {
+    background: #f8901c;
+    padding: 5px 15px;
+    border-radius: 100vw;
+    color: #faf9fb;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .bannerContent a:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
   }
