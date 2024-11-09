@@ -1,13 +1,14 @@
-import { AccountBalanceRounded, Chat, Favorite, Home, Settings, SummarizeRounded } from '@mui/icons-material';
+import { AccountBalanceRounded, Chat, Favorite, HomeRounded, Settings, SummarizeRounded } from '@mui/icons-material';
 import { useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import MenuContainer from './Components/MenuContainer';
 import BannerName from './Components/BannerName'
-import Bannerimg from './Assets/bannerimg.png'
+import Bannerimg from './Assets/banner img cartoon.png'
 function App() {
 
   useEffect(() => {
+
     const menuLi = document.querySelectorAll("#menu li");
 
     function setMenuActive() {
@@ -30,10 +31,10 @@ function App() {
       <div className='menuContainer'>
         <div className='banner'>
            <BannerName name={'Mueed,s'} discount={20} link={'#'}/>
-             <img src={Bannerimg} alt='bannerimg' className='deliverypic '/>
+             <img src={Bannerimg} alt='bannerimg' className='deliveryPic '/>
         </div>
       </div>
-      <div className='rightMenu'></div>
+      <div className='rightMenu'></div>  
       </main>
 
        {/* Menu Bottom */}
@@ -41,7 +42,7 @@ function App() {
        <div className='bottomMenu'>
         <ul id='menu'>
           {/* prettier-ignore */}
-          <MenuContainer link={'#'} icon={<Home></Home>} ></MenuContainer>
+          <MenuContainer link={'#'} icon={<HomeRounded/>} isHome/>
           {/* prettier-ignore */}
           <MenuContainer link={'#'} icon={<Chat/>} ></MenuContainer>
           {/* prettier-ignore */}
