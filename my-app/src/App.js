@@ -27,6 +27,7 @@ function App() {
     <Header></Header>
 
       {/* Main Container  */}
+      
      <main>
       <div className='menuContainer'>
         <div className='banner'>
@@ -41,6 +42,7 @@ function App() {
 
        <div className='bottomMenu'>
         <ul id='menu'>
+
           {/* prettier-ignore */}
           <MenuContainer link={'#'} icon={<HomeRounded/>} isHome/>
           {/* prettier-ignore */}
