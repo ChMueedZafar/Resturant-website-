@@ -5,6 +5,9 @@ import Header from './Components/Header';
 import MenuContainer from './Components/MenuContainer';
 import BannerName from './Components/BannerName'
 import Bannerimg from './Assets/banner img cartoon.png'
+import SubMenuContainer from './Components/SubMenuContainer';
+import MenuCard from './Components/MenuCard';
+import {MenuItems,Items} from './Components/Data';
 function App() {
 
   useEffect(() => {
@@ -22,18 +25,36 @@ function App() {
   return (
     <div className='App'>
 
-  
      {/* Header Secation  */}
+
     <Header></Header>
 
       {/* Main Container  */}
       
      <main>
+      {/* Banner */}
       <div className='menuContainer'>
         <div className='banner'>
            <BannerName name={'Mueed,s'} discount={20} link={'#'}/>
-             <img src={Bannerimg} alt='bannerimg' className='deliveryPic '/>
+            <img src={Bannerimg} alt='bannerimg' className='deliveryPic '/>
         </div>
+             {/* dish container */}
+          <div className="dishContainer">
+            <div className="menuCard">
+              <SubMenuContainer name={"Menu Category"} />
+            </div>
+            <div className="rowContainer">
+            {MenuItems &&
+                MenuItems.map((data) => (
+                  <div key={data.id}>
+                  <MenuCard imgSrc={data.imgSrc} name={data.name} isActive = {data.id === '1' ? true : false}/>
+                  </div>
+                ))}
+               
+               
+            </div>
+            <div className="dishitemContainer"></div>
+          </div>
       </div>
       <div className='rightMenu'></div>  
       </main>
