@@ -7,7 +7,9 @@ import BannerName from './Components/BannerName'
 import Bannerimg from './Assets/banner img cartoon.png'
 import SubMenuContainer from './Components/SubMenuContainer';
 import MenuCard from './Components/MenuCard';
-import {MenuItems,Items} from './Components/Data';
+import {MenuItems,Items} from './Components/Data'
+import { ItemCard } from './Components/ItemCard';
+
 function App() {
 
   useEffect(() => {
@@ -18,8 +20,20 @@ function App() {
       menuLi.forEach((n) => n.classList.remove("active"));
       this.classList.add("active");
     }
-
     menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
+
+      // MenuCard Active Toggle
+
+     const menuCards = document 
+     .querySelector(".rowContainer")
+     .querySelectorAll(".rowMenuCard")
+
+     function setMenuCardActive () {
+      menuCards.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+     } 
+
+     menuCards.forEach((n) => n.addEventListener("click", setMenuCardActive));
   },[]);
   
   return (
@@ -38,7 +52,7 @@ function App() {
            <BannerName name={'Mueed,s'} discount={20} link={'#'}/>
             <img src={Bannerimg} alt='bannerimg' className='deliveryPic '/>
         </div>
-             {/* dish container */}
+             {/* dish container main*/}
           <div className="dishContainer">
             <div className="menuCard">
               <SubMenuContainer name={"Menu Category"} />
@@ -47,13 +61,16 @@ function App() {
             {MenuItems &&
                 MenuItems.map((data) => (
                   <div key={data.id}>
-                  <MenuCard imgSrc={data.imgSrc} name={data.name} isActive = {data.id === '1' ? true : false}/>
+                   <MenuCard imgSrc={data.imgSrc} name={data.name} isActive = {data.id === 1 ? true : false}/>
                   </div>
                 ))}
-               
-               
+              
             </div>
-            <div className="dishitemContainer"></div>
+             {/* dish container */}
+                 
+            <div className="dishitemContainer">
+              <ItemCard imgSrc={"https://tse2.mm.bing.net/th?id=OIP.4nCvKzh707VhLt4DAArAJQHaFz&pid=Api&P=0&h=220"} name={"Burger Bistro"} ratings={5} price={"7.5"} />
+            </div>
           </div>
       </div>
       <div className='rightMenu'></div>  

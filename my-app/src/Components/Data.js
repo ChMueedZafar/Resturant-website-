@@ -3,43 +3,43 @@ const MenuItems = [
       id: 1,
       itemId: "buger01",
       name: "Burger",
-      imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fburger3.png?alt=media&token=0ebe8311-6378-411b-9b6e-d7a6d2a106a2",
+      imgSrc:"https://purepng.com/public/uploads/large/purepng.com-burgerburger-food-941524642313qxuum.png"
+
     },
     {
       id: 2,
       itemId: "pizza01",
       name: "Pizza",
       imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fpizzaslice.png?alt=media&token=c91c0c7e-ffa9-41be-ba84-c3b45c79d483",
+        "https://www.pngarts.com/files/3/Pizza-Slice-Transparent-Image.png",
     },
     {
       id: 3,
       itemId: "hotdog01",
       name: "Hotdog",
       imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fhdog1.png?alt=media&token=658e67d8-9284-4ba4-93ad-778dad99ce9c",
+        "https://static.vecteezy.com/system/resources/previews/021/952/576/original/free-spicy-hot-dog-hot-dog-transparent-background-free-png.png",
     },
     {
       id: 4,
       itemId: "taco01",
       name: "Taco",
       imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Ftaco1.png?alt=media&token=b78c8e68-c1a6-4e43-8c43-6ef9f23aa59f",
+        "https://static.vecteezy.com/system/resources/previews/024/108/762/original/tasty-beef-and-vegetable-taco-isolated-on-transparent-background-png.png",
     },
     {
       id: 5,
       itemId: "snack01",
       name: "Snack",
       imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fsnack1.png?alt=media&token=d670617e-4bfc-4693-aa8c-211db9f9d706",
+        "https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/7771642/snacks-clipart-md.png",
     },
     {
       id: 6,
       itemId: "drink01",
       name: "Drink",
       imgSrc:
-        "https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Fdrink1.png?alt=media&token=e9cc5e4e-2194-4766-9d5a-5e01657927b7",
+        "https://freepngimg.com/thumb/drink/22700-6-drink-transparent-image.png",
     },
   ];
   
