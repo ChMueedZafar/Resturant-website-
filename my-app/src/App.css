@@ -493,14 +493,14 @@
   margin: 10px 0;
 }
 
-/* .isFavourite {
+.isFavourite {
   position: absolute;
   top: 80px;
   right: 10px;
   transition: 0.5s;
-} */
+} 
 
-/* .isFavourite .MuiSvgIcon-root {
+ .isFavourite .MuiSvgIcon-root {
   font-size: 18px;
   color: #ff000088;
 }
@@ -508,7 +508,7 @@
 .isFavourite.active .MuiSvgIcon-root {
   color: #ff0000;
   filter: drop-shadow(0px 0px 8px #ff0000);
-} */
+}
 
 .itemCard .imgBox {
   width: 100px;
@@ -581,4 +581,12 @@
 .itemContent .addtoCart .MuiSvgIcon-root {
   color: #faf9fb;
   font-size: 16px;
+}
+
+.orange {
+  color: #f8901c !important;
+}
+
+.gray {
+  color: #373848 !important;
 }

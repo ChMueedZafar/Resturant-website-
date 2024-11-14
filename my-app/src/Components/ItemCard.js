@@ -1,10 +1,14 @@
+import React from "react";
+import { useState } from "react";
 import { Favorite, StarRounded, AddRounded } from "@mui/icons-material";
-import React from 'react'
 
 export const ItemCard = ({imgSrc, name, ratings, price}) => {
+    const [isFavourite, setFavourite] = useState(false);
+
   return (
     <div className="itemCard">
-        <div className="isfavourite">
+        <div className={`isFavourite ${isFavourite ? "active" : ""}`}
+            onClick={() => setFavourite(!isFavourite)}>
             <Favorite />
         </div>
         <div className="imgBox">
