@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const DebitCard = () => {
+const DebitCard = () => {
   return (
     <div>DebitCard</div>
   )
 }
+
+export default DebitCard
