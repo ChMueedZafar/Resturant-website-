@@ -1,5 +1,5 @@
 import { AccountBalanceRounded, Chat, Favorite, HomeRounded, Settings, SummarizeRounded } from '@mui/icons-material';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import MenuContainer from './Components/MenuContainer';
@@ -9,8 +9,14 @@ import SubMenuContainer from './Components/SubMenuContainer';
 import MenuCard from './Components/MenuCard';
 import {MenuItems,Items} from './Components/Data'
 import { ItemCard } from './Components/ItemCard';
+import DebitCard from './Components/DebitCard';
 
 function App() {
+// dish container
+  const [isMainData, setMainData] = useState(
+    Items.filter((element) => element.itemId === "buger01")
+  );
+
 
   useEffect(() => {
 
@@ -34,7 +40,14 @@ function App() {
      } 
 
      menuCards.forEach((n) => n.addEventListener("click", setMenuCardActive));
-  },[]);
+  },[isMainData]);
+
+
+  // seat main dish items on filter
+  const setData = (itemId) =>{
+    setMainData(Items.filter((element) => element.itemId === itemId))
+    
+  }
   
   return (
     <div className='App'>
@@ -60,8 +73,10 @@ function App() {
             <div className="rowContainer">
             {MenuItems &&
                 MenuItems.map((data) => (
-                  <div key={data.id}>
-                   <MenuCard imgSrc={data.imgSrc} name={data.name} isActive = {data.id === 1 ? true : false}/>
+                  <div key={data.id} onClick={() => setData(data.itemId)}>
+                   <MenuCard imgSrc={data.imgSrc}
+                  name={data.name}
+                  isActive = {data.id === 1 ? true : false}/>
                   </div>
                 ))}
               
@@ -69,11 +84,29 @@ function App() {
              {/* dish container */}
                  
             <div className="dishitemContainer">
-              <ItemCard imgSrc={"https://tse2.mm.bing.net/th?id=OIP.4nCvKzh707VhLt4DAArAJQHaFz&pid=Api&P=0&h=220"} name={"Burger Bistro"} ratings={5} price={"7.5"} />
+              {
+                isMainData && isMainData.map(data => (
+                  <ItemCard key={data.id} 
+                  itemId = {data.id}
+                  imgSrc={data.imgSrc}
+                  name={data.name}
+                  ratings={data.ratings} 
+                  price={data.price} />
+                ))
+              } 
             </div>
           </div>
       </div>
-      <div className='rightMenu'></div>  
+      <div className='rightMenu'>
+        <div className="debitCardContainer">
+          <div className="debitCard">
+            <DebitCard/>
+          </div>
+        </div>
+        
+        
+        
+        </div>  
       </main>
 
        {/* Menu Bottom */}

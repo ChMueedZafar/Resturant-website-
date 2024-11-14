@@ -295,12 +295,12 @@
   .bannerContent p {
     font-size: 14px;
     width: 200px;
-    color: #f0e6e6;
+    color: #444;
     margin: 5px 0;
   }
   
   .bannerContent p span {
-    color: #000000;
+    color: #f8901c;
     font-weight: 500;
   }
   
@@ -475,7 +475,7 @@
 
 /* dishContainer */
 
-.dishItemContainer {
+.dishitemContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -557,6 +557,14 @@
   font-size: 16px;
 }
 
+.orange {
+  color: #f8901c !important;
+}
+
+.gray {
+  color: #373848 !important;
+}
+
 .itemContent .bottom .price {
   font-size: 16px;
 }
@@ -583,10 +591,3 @@
   font-size: 16px;
 }
 
-.orange {
-  color: #f8901c !important;
-}
-
-.gray {
-  color: #373848 !important;
-}
