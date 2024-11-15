@@ -10,6 +10,7 @@ import MenuCard from './Components/MenuCard';
 import {MenuItems,Items} from './Components/Data'
 import { ItemCard } from './Components/ItemCard';
 import DebitCard from './Components/DebitCard';
+import CartItem from './Components/CartItem';
 
 function App() {
 // dish container
@@ -59,6 +60,7 @@ function App() {
       {/* Main Container  */}
       
      <main>
+
       {/* Banner */}
       <div className='menuContainer'>
         <div className='banner'>
@@ -97,16 +99,26 @@ function App() {
             </div>
           </div>
       </div>
+
+         {/* right Menu */}
       <div className='rightMenu'>
         <div className="debitCardContainer">
           <div className="debitCard">
             <DebitCard/>
           </div>
         </div>
-        
-        
-        
-        </div>  
+         <div className='cardCheckOutContainer'>
+          <div className='cartContainer'>
+            <SubMenuContainer name={"Carts Items"}/>
+            <div className='cartItems'>
+               <CartItem name={"Burger Bristo"}
+               imgSrc={"https://www.pngarts.com/files/3/Burger-Transparent-Images.png"} 
+              qty={"4"}
+              price={"7.95"}/> 
+              </div>
+            </div>
+          </div>
+         </div>
       </main>
 
        {/* Menu Bottom */}

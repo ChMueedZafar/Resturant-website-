@@ -598,7 +598,7 @@
   height: calc(100% - 55px);
   background: #fff;
   position: fixed;
-  right: 0;
+  right: -10;
   top: 55px;
   z-index: 105;
   display: flex;
@@ -612,7 +612,7 @@
 
 /* .rightMenu.active {
   transform: translateX(0%);
-}
+} */
 
 .debitCardContainer {
   padding: 10px;
@@ -668,8 +668,8 @@
   height: 100%;
 }
 
-.cardLogo,
-.cardChip,
+.card_Logo,
+.card_Chip,
 .card_number,
 .card_name,
 .card_from,
@@ -678,15 +678,15 @@
   position: absolute;
 }
 
-.cardLogo {
-  width: 60px;
+.card_Logo {
+  width: 80px;
   top: 30px;
   right: 30px;
   height: auto;
 }
 
-.cardChip {
-  width: 40px;
+.card_Chip {
+  width: 50px;
   top: 50px;
   left: 30px;
   height: auto;
@@ -696,8 +696,8 @@
 .card_from,
 .card_to,
 .card_name {
-  color: #fff;
-  font-weight: 400;
+  color: black;
+  font-weight: 500;
   letter-spacing: 2px;
 }
 
@@ -849,4 +849,4 @@
 .cartItem .itemPrice .itemPriceValue {
   font-size: 16px;
   color: #373848;
-} */
+}

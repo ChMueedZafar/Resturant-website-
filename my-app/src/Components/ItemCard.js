@@ -18,7 +18,7 @@ const handleClick = (value) => {
             <Favorite />
         </div>
         <div className="imgBox">
-            <img src={imgSrc} alt="first img" className="itemimg" />
+            <img src={imgSrc}  alt="first img" className="itemimg" />
         </div>
           <div className="itemContent">
             <h3 className="itemName">{name}</h3>
