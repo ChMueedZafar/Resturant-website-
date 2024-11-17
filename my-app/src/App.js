@@ -108,8 +108,9 @@ function App() {
           </div>
         </div>
          <div className='cardCheckOutContainer'>
+         <SubMenuContainer name={"Carts Items"}/>
+
           <div className='cartContainer'>
-            <SubMenuContainer name={"Carts Items"}/>
             <div className='cartItems'>
                <CartItem name={"Burger Bristo"}
                imgSrc={"https://www.pngarts.com/files/3/Burger-Transparent-Images.png"} 
@@ -117,6 +118,13 @@ function App() {
               price={"7.95"}/> 
               </div>
             </div>
+            <div className="totalSection">
+              <h3>Total</h3>
+              <p>
+                <span>$ </span>45.0
+              </p>
+            </div>
+            <button className='checkOut'>Check Out</button>
           </div>
          </div>
       </main>
